@@ -1,5 +1,7 @@
-import { Route, HashRouter as Router } from 'react-router-dom';
+// import { Route, HashRouter as Router } from 'react-router-dom';
+import {HashRouter as Router, Route, Switch } from 'react-router-dom';
 import MovieList from '../MovieList/MovieList';
+import MovieDetail from '../MovieDetail/MovieDetail';
 import './App.css';
 
 function App() {
@@ -10,10 +12,11 @@ function App() {
         <Route path="/" exact>
           <MovieList />
         </Route>
-        
-        {/* Details page */}
-
-        {/* Add Movie page */}
+        <switch>
+          <Route path= "/" excat componet={MovieList}/>
+          <Route path= "Details" componet ={MovieDetail}/>
+        </switch>
+      
         
       </Router>
     </div>
